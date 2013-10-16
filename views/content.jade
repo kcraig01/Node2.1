@@ -1,0 +1,41 @@
+div#anotherdiv
+	p
+		|A div with an ID.
+		|That is a block of text
+		|That is piped.
+		|Also using "include"
+	.class
+		.nestedclass
+			p I am nested in a column in a row
+			p So am I!
+		.nestedclass
+			p Oh look another column
+
+div: p: span Span nested in a div by using a colon
+
+div#input This is an input nested in a div
+	input(type=type, value='Hello #{name}')
+
+div#food  
+	p I am a list of food
+	ul.food
+	+foodList(food)
+
+if name == "Kerry"
+	h3 Using an if, else statement to confirm that name is Kerry
+else
+	h3 No, name is not Kerry, it is #{name}
+
+div#listnumber
+	p I am a list of numbers from the number array
+		ul
+			for number in numbers
+				li= number
+			else
+				li sorry, no number!
+
+div#selectlist
+	p I am a select list of numbers from the number array
+	select
+	each number, i in numbers
+		option(value=i) Number #{number}

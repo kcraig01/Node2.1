@@ -1,0 +1,30 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#food,.p{
+	background-color: papayawhip;
+	width:auto;
+}
+#listnumber, #selectlist{
+	background-color: papayawhip;
+	display:inline-block;
+	float:left;
+}
+div {
+	background-color:steelblue;
+}
+
+div p ul{
+	background-color:papayawhip:;
+}
+
+.title{
+	background-color:peachpuff;
+}
+

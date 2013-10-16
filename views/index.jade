@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	h1= "I'm Jaded"
+		p.title Welcome to #{title}
+		p.anothertitle Another title with a class name
+	h2= "I am a h2 element with some text"
+	a(href='http://fall2013.refactoru.com') Student Site
+
+	include content
+
+mixin foodList(food)
+	ul
+	- for(var i = 0; i<food.length; i++){
+			li=food[i]
+	- }
