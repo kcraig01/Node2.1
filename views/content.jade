@@ -1,41 +1,77 @@
-div#anotherdiv
-	p
-		|A div with an ID.
-		|That is a block of text
-		|That is piped.
-		|Also using "include"
-	.class
-		.nestedclass
-			p I am nested in a column in a row
-			p So am I!
-		.nestedclass
-			p Oh look another column
+doctype 5
+html
+	head
+		title = title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+		script(type="text/javascript" src="/javascripts/app.js")
+		
+	body
+		div#anotherdiv
+			p
+				|A div with an ID.
+				|That is a block of text
+				|That is piped.
+				|Also using "include"
+			.class
+				.nestedclass
+					p I am nested in a column in a row
+					p So am I!
+				.nestedclass
+					p Oh look another column
 
-div: p: span Span nested in a div by using a colon
+		div: p: span Span nested in a div by using a colon
 
-div#input This is an input nested in a div
-	input(type=type, value='Hello #{name}')
+		div#input This is an input nested in a div
+			input(type=type, value='Hello #{name}')
 
-div#food  
-	p I am a list of food
-	ul.food
-	+foodList(food)
+		div#food  
+			p I am a list of food
+			ul.food
+			+foodList(food)
 
-if name == "Kerry"
-	h3 Using an if, else statement to confirm that name is Kerry
-else
-	h3 No, name is not Kerry, it is #{name}
+		if name == "Kerry"
+			h3 Using an if, else statement to confirm that name is Kerry
+		else
+			h3 No, name is not Kerry, it is #{name}
 
-div#listnumber
-	p I am a list of numbers from the number array
-		ul
-			for number in numbers
-				li= number
-			else
-				li sorry, no number!
+		div#listnumber
+			p I am a list of numbers from the number array
+				ul
+					for number in numbers
+						li= number
+					else
+						li sorry, no number!
 
-div#selectlist
-	p I am a select list of numbers from the number array
-	select
-	each number, i in numbers
-		option(value=i) Number #{number}
+		div#selectlist
+			p I am a select list of numbers from the number array
+			select#selectedID
+				each number, i in numbers
+					option(value=number) Number #{number}
+			div#selectedNumber
+
+		div#login
+				form(method='post')
+					|Enter your name
+					input(type='text', name='username')
+					input(type='submit', name='submit', value='LogIn')
+		div#message
+
+
+		//- @-webkit-keyframes pulse {
+		//- 0% {background-color: green;}
+		//- 100%{background-color: blue;}
+		//- }
+
+		//- .pulse {
+		//- 	-webkit-animation: pulse 10s infinite;
+		//- }
+
+
+		//- - $('#selectedID').on('change',function(e){
+		//- 		var selected = $(this.val())
+		//- 		console.log(selected)
+		//- - 		$('#selectedNumber').html(selected);
+		
+	body
+	head
